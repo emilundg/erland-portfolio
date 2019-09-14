@@ -1,6 +1,6 @@
 # Ajla portfolio
 
-> Portfolio for UX engineer AjlaC
+> Portfolio for Interaction designer Johan Erlandsson 
 
 ## Build Setup
 

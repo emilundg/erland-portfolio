@@ -78,14 +78,13 @@
             <h1>Portfolio</h1>
             <div class="row">
                 <div v-if="window.width >= 769" class="col-12 col-sm-12 col-md-6 col-lg-6">
-                    <div class="swiper-pagination" slot="pagination"></div>
                     <!-- ********FIRST cover***********-->
-                    <div class="card-style">
+                    <div class="card-style mb-5">
                         <b-card
-                            @click="show('share-it')"
-                            title="Share It"
+                            @click="show('deception')"
+                            title="Deception"
                             class="m-3"
-                            img-src="static/images/shareit-cover.png"
+                            img-src="static/images/deception/Annotations_Group10-1-33-1-1.png"
                             img-alt="Image"
                             img-top
                             tag="article">
@@ -96,22 +95,65 @@
                         </b-card>
                     </div>
 
+                    <!-- ********SECOND cover***********-->
+                    <div class="card-style mb-5">
+                        <b-card
+                            @click="show('timeedit')"
+                            title="Improved timeedit"
+                            class="m-3"
+                            img-src="static/images/timeedit/pres.png"
+                            img-alt="Image"
+                            img-top
+                            tag="article">
+                            <p class="card-text">
+                                UX/UI Design
+                                <br/>GUI design
+                            </p>
+                        </b-card>
+                    </div>
+
                     <!-- ********THIRD cover***********-->
+                    <div class="card-style mb-5">
+                        <b-card
+                            @click="show('sail')"
+                            title="Sail away"
+                            class="m-3"
+                            img-src="static/images/sail/Presentation_group30.png"
+                            img-alt="Image"
+                            img-top
+                            tag="article">
+                            <p class="card-text">
+                                Mobile application created to Encourage sailor to sail and explore more.
+                            </p>
+                        </b-card>
+                    </div>
 
                     <!-- ********FOURTH cover***********-->
-
-                    <!-- ********FIFTH cover***********-->
-
-                    <!-- ********SIXTH cover***********-->
+                    <div class="card-style mb-5">
+                        <b-card
+                            @click="show('timereg')"
+                            title="Time reg"
+                            class="m-3"
+                            img-src="static/images/timepres/timereg.png"
+                            img-alt="Image"
+                            img-top
+                            tag="article">
+                            <p class="card-text">
+                                UX/UI Design
+                                <br/>Application
+                            </p>
+                        </b-card>
+                    </div>
 
                 </div>
-                <!-- ********FIRST cover mobile***********-->
+
                 <div v-else class="col-sm-8">
+                <!-- ********FIRST cover mobile***********-->
                     <b-card
-                        @click="show('share-it')"
-                        title="Share It"
+                        @click="show('Deception')"
+                        title="Deception"
                         class="m-3"
-                        img-src="static/images/shareit-cover.png"
+                        img-src="static/images/deception/Annotations_Group10-1-33-1-1.png"
                         img-alt="Image"
                         img-top
                         tag="article">
@@ -121,115 +163,160 @@
                         </p>
                     </b-card>
                     <!-- ********SECOND cover mobile***********-->
-
+                    <b-card
+                        @click="show('timeedit')"
+                        title="timeedit"
+                        class="m-3"
+                        img-src="static/images/timeedit/pres.png"
+                        img-alt="Image"
+                        img-top
+                        tag="article">
+                        <p class="card-text">
+                            UX/UI Design
+                            <br/>GUI design
+                        </p>
+                    </b-card>
                     <!-- ********THIRD cover mobile***********-->
+                    <b-card
+                        @click="show('sail')"
+                        title="Sail away"
+                        class="m-3"
+                        img-src="static/images/sail/Presentation_group30.png"
+                        img-alt="Image"
+                        img-top
+                        tag="article">
+                        <p class="card-text">
+                            Mobile application created to Encourage sailor to sail and explore more.
+                        </p>
+                    </b-card>
 
                     <!-- ********FOURTH cover mobile***********-->
-
-                    <!-- ********FIFTH cover mobile***********-->
-
-                    <!-- ********SIXTH cover mobile***********-->
-
+                    <b-card
+                        @click="show('timereg')"
+                        title="Timereg"
+                        class="m-3"
+                        img-src="static/images/timepres/timereg.png"
+                        img-alt="Image"
+                        img-top
+                        tag="article">
+                        <p class="card-text">
+                            UX/UI Design
+                            <br/>Application
+                        </p>
+                    </b-card>
                 </div>
                 <!-- ********FIRST MODAL***********-->
-                <modal
-                    height="auto"
-                    width="90%"
-                    :scrollable="true"
-                    name="share-it"
-                    class="pt-5">
+                <modal height="auto" width="90%" :scrollable="true" name="deception">
                     <div class="row modal-button p-4">
                         <button class="button button--modal_close p-3" @click="hide()">
                             <img src="https://image.flaticon.com/icons/svg/127/127936.svg"/>
                         </button>
                     </div>
                     <div class="row m-4">
-                        <h2 class="special-font">Share It</h2>
+                        <h2 class="special-font">Deception</h2>
                     </div>
+
                     <div class="row m-3">
                         <div class="col-12 col-sm-9">
-                            <b-img src="/static/images/shareit-header.png" thumbnail fluid/>
-                            <h4>About</h4>The challenge during this project was to design a mobile user
-                            interface while following the
-                            <a href="https://material.io/design/" target="_blank">Android design guidelines</a>.
-                            The project was performed during a week, full-time. The task was to design an
-                            app that families with children can use to rent things from each other according
-                            to given requirements.
+                            <h4>About</h4>
+                            Mobile version of the board game Deception. Project where the Task was to create
+                            a Mobile/tablet version of the board game deception. The design process
+                            consisted of getting a good understanding of the existing model and then using
+                            various ideating methods to come up with design ideas and then prototype, peer
+                            reviews until final design was done.
                         </div>
                     </div>
+
                     <div class="row m-3">
                         <div class="col-12 col-sm-9">
-                            <h4>Process and Guidelines</h4>The most important part of this project was to
-                            challenge myself and learn how to properly follow the guidelines with the
-                            respect to given requirements for the features of the application. In order to
-                            apply the rules form the guidelines to my design, I sketched out the navigation
-                            flow as well as layout of individual screens to get a better understanding on
-                            what parts of the content and structure needed to be further examined. The next
-                            step in the process was to decide upon what components were most suitable for
-                            the features in the requirements. For that I used the Android design and their
-                            directions for what and how to place components properly. After establishing the
-                            strucutre and layout, I prototyped a mock-up of the interface using Adobe XD.
-                        </div>
-                    </div>
-                    <div class="row m-3">
-                        <div class="col-12 col-sm-9">
-                            <h4>Early Sketches</h4>
-                            <b-img src="/static/images/share-it/sketches-navigation.png" thumbnail fluid/>
-                        </div>
-                    </div>
-                    <div class="row m-3">
-                        <div class="col-12 col-sm-9">
-                            <h4>Final Prototype</h4>The bottom navigation is the primary navigation, which
-                            is a Forward navigation that has direct access to all the top level screens in
-                            the hierarchy. The components that were used in this user interface are lists,
-                            cards, confirmation dialogs, image lists, fullscreen dialogs, dividers,
-                            call-to-action buttons, persistent search.
-                            <div class="row">
-                                <div class="col">
-                                    <b-img src="/static/images/share-it/ShareIT-posting.gif" thumbnail fluid/>
-                                </div>
-                                <div class="col">
-                                    <b-img src="/static/images/share-it/ShareIT-renting.gif" thumbnail fluid/>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row m-3">
-                        <div class="col-12 col-sm-9">
-                            <h4>Learning Outcomes</h4>Even though it was quite challenging to search for
-                            each direction and look up every single design component, it was still a new way
-                            of working where I learned a lot along the way. The fact that I could motivate
-                            each decision I made felt really good because it was a concrete and objective
-                            way to place the components in relation to each other and this gave me a clearer
-                            picture to why I designed the UI the way I did. A lot of times I found myself
-                            scrolling through the guidelines out of curiosity to read about all the
-                            different direction, even if those components weren’t relevant for my user
-                            interface. I enjoyed working on this project and I have a better understanding
-                            for finding a balance between following guidelines and designing an interface
-                            according to own aesthetic preferences.
-                        </div>
-                    </div>
-                    <div class="row m-3">
-                        <div class="col-12 col-sm-9">
-                            <h3 align="right">
-                                /
-                                <span class="special-font">
-                                    Ajla
-                                    <b>Cano</b>
-                                </span>
-                            </h3>
+                            <h4>Gallery</h4>
+                            <b-img
+                                class="mb-3"
+                                src="/static/images/deception/Investigator_ Identity_Witness.png"
+                                thumbnail
+                                fluid/>
+                            <b-img
+                                class="mb-3"
+                                src="/static/images/deception/Investigator-pick card.png"
+                                thumbnail
+                                fluid/>
+                            <b-img class="mb-3" src="/static/images/deception/Tiles.png" thumbnail fluid/>
+                            <b-img
+                                class="mb-3"
+                                src="/static/images/deception/Forensic.png"
+                                thumbnail
+                                fluid/>
                         </div>
                     </div>
                 </modal>
                 <!-- ********SECOND MODAL***********-->
+                <modal height="auto" width="90%" :scrollable="true" name="timeedit">
+                    <div class="row modal-button p-4">
+                        <button class="button button--modal_close p-3" @click="hide()">
+                            <img src="https://image.flaticon.com/icons/svg/127/127936.svg"/>
+                        </button>
+                    </div>
+                    <div class="row m-4">
+                        <h2 class="special-font">Timeedit</h2>
+                    </div>
+
+                    <div class="row m-3">
+                        <div class="col-12 col-sm-9">
+                            <h4>About</h4>
+                            In this individual project. We were assigned to improve the existing design of
+                            the schedule manager that my university was using, timeedit. The design process
+                            consisted of evaluating the existing model, finding pros and cons and then
+                            coming up with improvement suggestion to implement in the final design.
+                        </div>
+                    </div>
+
+                    <div class="row m-3">
+                        <div class="col-12 col-sm-9">
+                            <h4>Gallery</h4>
+                            <b-img class="mb-3" src="/static/images/timeedit/1.png" thumbnail fluid/>
+                            <b-img class="mb-3" src="/static/images/timeedit/3.png" thumbnail fluid/>
+                            <b-img class="mb-3" src="/static/images/timeedit/7.png" thumbnail fluid/>
+                            <b-img class="mb-3" src="/static/images/timeedit/BM1.png" thumbnail fluid/>
+                            <b-img class="mb-3" src="/static/images/timeedit/BM4.png" thumbnail fluid/>
+                        </div>
+                    </div>
+                </modal>
 
                 <!-- ********THIRD MODAL***********-->
+                <modal height="auto" width="90%" :scrollable="true" name="sail">
+                    <div class="row modal-button p-4">
+                        <button class="button button--modal_close p-3" @click="hide()">
+                            <img src="https://image.flaticon.com/icons/svg/127/127936.svg"/>
+                        </button>
+                    </div>
+                    <div class="row m-4">
+                        <h2 class="special-font">Sail away</h2>
+                    </div>
+
+                    <div class="row m-3">
+                        <div class="col-12 col-sm-9">
+                            <h4>About</h4>
+                            In this project we were assigned a task to encourage sailors to sail and explore
+                            more. The process to create this app design consisted of various brainstorming
+                            methods, prototyping, user interviews as well as iterative design work to
+                            improve our design as much as possible in the given time we had
+                        </div>
+                    </div>
+
+                    <div class="row m-3">
+                        <div class="col-12 col-sm-9">
+                            <h4>Gallery</h4>
+                            <iframe
+                                width="560"
+                                height="315"
+                                src="https://www.youtube.com/embed/DmyX3c8T_Xc"
+                                frameborder="0"
+                                allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </modal>
 
                 <!-- ********FOURTH MODAL***********-->
-
-                <!-- ********FIFTH MODAL***********-->
-
-                <!-- ********SIXTH MODAL***********-->
 
             </div>
         </b-container>
@@ -513,6 +600,7 @@ export default {
     .header,
     .lead {
         font-size: 34px;
+        color: black;
         font-family: 'Dosis', sans-serif;
     }
 
@@ -523,6 +611,7 @@ export default {
 
 .header,
 .lead {
+    color: black;
     font-size: 55px;
     font-family: 'Dosis', sans-serif;
 }
