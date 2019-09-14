@@ -66,7 +66,7 @@
                     </b-jumbotron>
                     <p class="small-italic">For more detailed information:</p>
                     <div class="container">
-                        <a class="" target="_blank" href="static/pdf/Ajla-CV-v19.pdf">
+                        <a class="" target="_blank" href="static/pdf/CV.pdf">
                             <span>Open Resume</span>
                         </a>
                     </div>
@@ -148,7 +148,7 @@
                 </div>
 
                 <div v-else class="col-sm-8">
-                <!-- ********FIRST cover mobile***********-->
+                    <!-- ********FIRST cover mobile***********-->
                     <b-card
                         @click="show('Deception')"
                         title="Deception"
@@ -317,6 +317,52 @@
                 </modal>
 
                 <!-- ********FOURTH MODAL***********-->
+                <modal height="auto" width="90%" :scrollable="true" name="timereg">
+                    <div class="row modal-button p-4">
+                        <button class="button button--modal_close p-3" @click="hide()">
+                            <img src="https://image.flaticon.com/icons/svg/127/127936.svg"/>
+                        </button>
+                    </div>
+                    <div class="row m-4">
+                        <h2 class="special-font">Timereg</h2>
+                    </div>
+
+                    <div class="row m-3">
+                        <div class="col-12 col-sm-9">
+                            <h4>About</h4>
+                            In this Company-focused project we were asked to develop an application for a
+                            consultancy firm to register their worked hours. The project consisted of User
+                            interviews, brainstorming, iterating on the design and contact with the project
+                            owner to develop it in the best possible way.
+                        </div>
+                    </div>
+
+                    <div class="row m-3">
+                        <div class="col-12 col-sm-9">
+                            <h4>Gallery</h4>
+                            <b-img
+                                class="mb-3"
+                                src="/static/images/timepres/1_Startscreen.png"
+                                thumbnail
+                                fluid/>
+                            <b-img
+                                class="mb-3"
+                                src="/static/images/timepres/5_Add_Comment.png"
+                                thumbnail
+                                fluid/>
+                            <b-img
+                                class="mb-3"
+                                src="/static/images/timepres/8_Pressed_calendar.png"
+                                thumbnail
+                                fluid/>
+                            <b-img
+                                class="mb-3"
+                                src="/static/images/timepres/9_Pressed_Stats.png"
+                                thumbnail
+                                fluid/>
+                        </div>
+                    </div>
+                </modal>
 
             </div>
         </b-container>
@@ -326,402 +372,398 @@
                 <div class="col-md-6">
                     <b-media class="card-style">
                         <div class="contact-social-group m-4">
-                            <img
-                                @click="tab = 4"
-                                class="social-icon-large"
-                                src="https://image.flaticon.com/icons/svg/131/131155.svg"/>
+                            <h3>Linkedin</h3>
                             <a href="https://www.linkedin.com/in/johan-erlandsson-542402150/"/>
                             <img
                                 class="social-icon-large"
                                 src="https://image.flaticon.com/icons/svg/220/220343.svg"/>
-                        </a>
-                    </div>
-                    <h3>Or send me a message !</h3>
-                    <b-form class="m-4">
-                        <b-form-group
-                            id="exampleInputGroup1"
-                            label="Email address:"
-                            label-for="exampleInput1">
-                            <b-form-input
-                                id="exampleInput1"
-                                type="email"
-                                v-model="form.email"
-                                required
-                                placeholder="Enter email"></b-form-input>
-                        </b-form-group>
-                        <b-form-group id="exampleInputGroup2" label="Topic:" label-for="exampleInput2">
-                            <b-form-input
-                                id="exampleInput2"
-                                type="text"
-                                v-model="form.topic"
-                                required
-                                placeholder="Enter topic"></b-form-input>
-                        </b-form-group>
-                        <b-form-textarea
-                            id="textarea1"
-                            v-model="form.text"
-                            placeholder
-                            :rows="3"
-                            :max-rows="6"></b-form-textarea>
-                        <div class="container mt-4">
-                            <a class="gradient-button" @click="sendEmail()">
-                                <span>Submit</span>
-                            </a>
                         </div>
-                    </b-form>
-                </b-media>
+                        <h3>Or email me</h3>
+                        <b-form class="m-4">
+                            <b-form-group
+                                id="exampleInputGroup1"
+                                label="Email address:"
+                                label-for="exampleInput1">
+                                <b-form-input
+                                    id="exampleInput1"
+                                    type="email"
+                                    v-model="form.email"
+                                    required
+                                    placeholder="Enter email"></b-form-input>
+                            </b-form-group>
+                            <b-form-group id="exampleInputGroup2" label="Topic:" label-for="exampleInput2">
+                                <b-form-input
+                                    id="exampleInput2"
+                                    type="text"
+                                    v-model="form.topic"
+                                    required
+                                    placeholder="Enter topic"></b-form-input>
+                            </b-form-group>
+                            <b-form-textarea
+                                id="textarea1"
+                                v-model="form.text"
+                                placeholder
+                                :rows="3"
+                                :max-rows="6"></b-form-textarea>
+                            <div class="container mt-4">
+                                <a class="gradient-button" @click="sendEmail()">
+                                    <span>Submit</span>
+                                </a>
+                            </div>
+                        </b-form>
+                    </b-media>
+                </div>
             </div>
-        </div>
-    </b-container>
-</div>
+        </b-container>
+    </div>
 </template>
 
 <script>
 
-require('vue2-animate/dist/vue2-animate.min.css');
+    require('vue2-animate/dist/vue2-animate.min.css');
 
-import * as api from '../api';
+    import * as api from '../api';
 
-import 'swiper/dist/css/swiper.css';
+    import 'swiper/dist/css/swiper.css';
 
-import {swiper, swiperSlide} from 'vue-awesome-swiper'
+    import {swiper, swiperSlide} from 'vue-awesome-swiper'
 
-export default {
+    export default {
 
-    name : 'app',
-    components : {
-        swiper,
-        swiperSlide
-    },
-    data() {
-        return {
-            window: {
-                width: 0,
-                height: 0
-            },
-            swiperOption: {
-                slidesPerView: '2',
-                speed: 400,
-                mousewheel: true,
-                centeredSlides: true,
-                keyboard: {
-                    enabled: true,
-                    onlyInViewport: true
+        name : 'app',
+        components : {
+            swiper,
+            swiperSlide
+        },
+        data() {
+            return {
+                window: {
+                    width: 0,
+                    height: 0
                 },
-                pagination: {
-                    el: '.swiper-pagination',
-                    type: 'bullets',
-                    dynamicBullets: true
-                }
-            },
-            tab: 1,
-            currentModal: '',
-            items: [
-                {
-                    color: '#3D3A61',
-                    tag: '2018-2020',
-                    content: 'M.SC. Interaction Design and Technologies at Chalmers'
-                }, {
-                    tag: '2015-2018',
-                    color: '#dcdcdc',
-                    type: 'circle',
-                    content: 'B.Sc. Computer Science and Engineering at Chalmers'
-                }, {
-                    tag: '2011-2014',
-                    color: '#dcdcdc',
-                    type: 'circle',
-                    content: 'Technical education at De la Gardie'
-                }
+                swiperOption: {
+                    slidesPerView: '2',
+                    speed: 400,
+                    mousewheel: true,
+                    centeredSlides: true,
+                    keyboard: {
+                        enabled: true,
+                        onlyInViewport: true
+                    },
+                    pagination: {
+                        el: '.swiper-pagination',
+                        type: 'bullets',
+                        dynamicBullets: true
+                    }
+                },
+                tab: 1,
+                currentModal: '',
+                items: [
+                    {
+                        color: '#3D3A61',
+                        tag: '2018-2020',
+                        content: 'M.SC. Interaction Design and Technologies at Chalmers'
+                    }, {
+                        tag: '2015-2018',
+                        color: '#dcdcdc',
+                        type: 'circle',
+                        content: 'B.Sc. Computer Science and Engineering at Chalmers'
+                    }, {
+                        tag: '2011-2014',
+                        color: '#dcdcdc',
+                        type: 'circle',
+                        content: 'Technical education at De la Gardie'
+                    }
 
-            ],
-            form: {
-                email: '',
-                topic: '',
-                text: ''
+                ],
+                form: {
+                    email: '',
+                    topic: '',
+                    text: ''
+                }
             }
-        }
-    },
-    created() {
-        window.addEventListener('resize', this.handleResize);
-        this.handleResize();
-    },
-    destroyed() {
-        window.removeEventListener('resize', this.handleResize)
-    },
-    methods : {
-        handleResize() {
-            this.window.width = window.innerWidth;
-            this.window.height = window.innerHeight;
         },
-        show(name) {
-            this.currentModal = name;
-            this
-                .$modal
-                .show(name);
+        created() {
+            window.addEventListener('resize', this.handleResize);
+            this.handleResize();
         },
-        hide() {
-            this
-                .$modal
-                .hide(this.currentModal);
+        destroyed() {
+            window.removeEventListener('resize', this.handleResize)
         },
-        changeTab(num) {
-            this.tab = num;
-        },
-        async sendEmail() {
-            var response = await api.sendEmail(this.form.email, this.form.topic, 'Hello, someone showed interest! ' + this.form.text);
-            if (response.status === 200) {
-                window
-                    .location
-                    .reload();
+        methods : {
+            handleResize() {
+                this.window.width = window.innerWidth;
+                this.window.height = window.innerHeight;
+            },
+            show(name) {
+                this.currentModal = name;
+                this
+                    .$modal
+                    .show(name);
+            },
+            hide() {
+                this
+                    .$modal
+                    .hide(this.currentModal);
+            },
+            changeTab(num) {
+                this.tab = num;
+            },
+            async sendEmail() {
+                var response = await api.sendEmail(this.form.email, this.form.topic, 'Hello, someone showed interest! ' + this.form.text);
+                if (response.status === 200) {
+                    window
+                        .location
+                        .reload();
+                }
             }
         }
     }
-}
 </script>
 <style lang="scss">
-@import url( 'https://fonts.googleapis.com/css?family=Dosis:500&display=swap');
+    @import url( 'https://fonts.googleapis.com/css?family=Dosis:500&display=swap');
 
-.modal-button {
-    justify-content: flex-end !important;
-}
+    .modal-button {
+        justify-content: flex-end !important;
+    }
 
-.button {
-    &.button--modal_close {
-        background: none;
-        outline: none;
+    .button {
+        &.button--modal_close {
+            background: none;
+            outline: none;
+            border: none;
+            float: right;
+            transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+            opacity: 0.87;
+
+            img {
+                width: 23px;
+            }
+            &:hover {
+                opacity: 0.56;
+            }
+        }
+    }
+
+    .card {
         border: none;
-        float: right;
         transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
-        opacity: 0.87;
+        background: none;
+        &:hover {
+            opacity: 0.87;
+        }
+    }
+
+    .navbar {
+        background-color: transparent !important;
+    }
+
+    .jumbotron {
+        padding: 0;
+        background-color: transparent;
+    }
+
+    .profile-pic {
+        border-radius: 50%;
+        max-width: 144px;
+    }
+
+    .media {
+        background: white;
+        border-radius: 8px;
+        transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+
+        .media-content {
+            margin: 0 auto;
+        }
 
         img {
-            width: 23px;
+            transition: all 0.2s ease-in-out;
+            max-width: auto;
+            max-height: 140px;
         }
+    }
+
+    .social-group {
+        position: absolute;
+        right: 0;
+        top: 65vh;
+
+        img {
+            margin-right: 8px;
+        }
+    }
+
+    .social-icon {
+        width: 22px;
+    }
+
+    .social-icon,
+    .social-icon-large {
+        opacity: 0.87;
+        height: auto;
+        margin-bottom: 24px;
+        transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
         &:hover {
             opacity: 0.56;
+            cursor: pointer;
         }
     }
-}
 
-.card {
-    border: none;
-    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
-    background: none;
-    &:hover {
-        opacity: 0.87;
-    }
-}
-
-.navbar {
-    background-color: transparent !important;
-}
-
-.jumbotron {
-    padding: 0;
-    background-color: transparent;
-}
-
-.profile-pic {
-    border-radius: 50%;
-    max-width: 144px;
-}
-
-.media {
-    background: white;
-    border-radius: 8px;
-    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
-
-    .media-content {
-        margin: 0 auto;
+    .social-icon-large {
+        margin: 8px;
+        width: 38px;
     }
 
-    img {
-        transition: all 0.2s ease-in-out;
-        max-width: auto;
-        max-height: 140px;
+    .back-icon {
+        float: left;
+        width: 18px;
     }
-}
 
-.social-group {
-    position: absolute;
-    right: 0;
-    top: 65vh;
+    .quote {
+        width: 90%;
+        color: rgba(255, 255, 255, 0.87);
 
-    img {
-        margin-right: 8px;
+        .lead {
+            font-style: italic;
+            font-size: 40px;
+        }
     }
-}
 
-.social-icon {
-    width: 22px;
-}
-
-.social-icon,
-.social-icon-large {
-    opacity: 0.87;
-    height: auto;
-    margin-bottom: 24px;
-    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
-    &:hover {
-        opacity: 0.56;
-        cursor: pointer;
+    .bold-p {
+        font-weight: 500;
     }
-}
 
-.social-icon-large {
-    margin: 8px;
-    width: 38px;
-}
+    .landing-profile {
+        // box-shadow: 0 10px 20px rgba( 0,0,0, 0.19), 0 6px 6px rgba(0,0,0,0.23);
+        border: 1px solid black;
+        background: white;
+        border-radius: 13px;
+        .header,
+        .lead {
+            font-size: 34px;
+            color: black;
+            font-family: 'Dosis', sans-serif;
+        }
 
-.back-icon {
-    float: left;
-    width: 18px;
-}
-
-.quote {
-    width: 90%;
-    color: rgba(255, 255, 255, 0.87);
-
-    .lead {
-        font-style: italic;
-        font-size: 40px;
+        .lead {
+            font-weight: bold;
+        }
     }
-}
 
-.bold-p {
-    font-weight: 500;
-}
-
-.landing-profile {
-    // box-shadow: 0 10px 20px rgba( 0,0,0, 0.19), 0 6px 6px rgba(0,0,0,0.23);
-    border: 1px solid black;
-    background: white;
-    border-radius: 13px;
     .header,
     .lead {
-        font-size: 34px;
         color: black;
+        font-size: 55px;
         font-family: 'Dosis', sans-serif;
     }
 
-    .lead {
-        font-weight: bold;
+    .card-style {
+        border: 1px solid black;
+        border-radius: 13px;
     }
-}
 
-.header,
-.lead {
-    color: black;
-    font-size: 55px;
-    font-family: 'Dosis', sans-serif;
-}
+    .about {
+        .text {
+            text-align: left;
+            margin: 0 auto;
+        }
+    }
 
-.card-style {
-    border: 1px solid black;
-    border-radius: 13px;
-}
-
-.about {
-    .text {
+    .line-item {
         text-align: left;
-        margin: 0 auto;
     }
-}
 
-.line-item {
-    text-align: left;
-}
-
-.contact-social-group {
-    .social-icon {
-        margin: 30px 15px;
+    .contact-social-group {
+        .social-icon {
+            margin: 30px 15px;
+        }
     }
-}
 
-.small-italic {
-    font-size: 13px;
-    font-style: italic;
-    color: rgba(0, 0, 0, 0.56);
-}
+    .small-italic {
+        font-size: 13px;
+        font-style: italic;
+        color: rgba(0, 0, 0, 0.56);
+    }
 
-.row {
-    justify-content: center;
-}
+    .row {
+        justify-content: center;
+    }
 
-.highlight-background {
-    background-color: rgba(116, 167, 158, 0.36);
-}
+    .highlight-background {
+        background-color: rgba(116, 167, 158, 0.36);
+    }
 
-.col-form-label {
-    float: left;
-}
+    .col-form-label {
+        float: left;
+    }
 
-.body-background {
-    background-clip: content-box;
-    background: url('/static/images/unsplash-background.jpg');
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    min-height: 100%;
-    min-width: 1024px;
-    /* Set up proportionate scaling */
-    width: 100%;
-    height: auto;
-    /* Set up positioning */
-    position: fixed;
-    top: 0;
-    left: 0;
-}
+    .body-background {
+        background-clip: content-box;
+        background: url('/static/images/unsplash-background.jpg');
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        min-height: 100%;
+        min-width: 1024px;
+        /* Set up proportionate scaling */
+        width: 100%;
+        height: auto;
+        /* Set up positioning */
+        position: fixed;
+        top: 0;
+        left: 0;
+    }
 
-.resp-container {
-    position: relative;
-    overflow: hidden;
-    padding-top: 56.25%;
-}
+    .resp-container {
+        position: relative;
+        overflow: hidden;
+        padding-top: 56.25%;
+    }
 
-.resp-iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    border: 0;
-}
+    .resp-iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border: 0;
+    }
 
-.clip1 {
-    opacity: 0.21;
-    // -webkit-clip-path: polygon(0 0, 49% 0, 38% 100%, 0% 100%);
-    // clip-path: polygon(0 0, 49% 0, 38% 100%, 0% 100%);
-}
+    .clip1 {
+        opacity: 0.21;
+        // -webkit-clip-path: polygon(0 0, 49% 0, 38% 100%, 0% 100%);
+        // clip-path: polygon(0 0, 49% 0, 38% 100%, 0% 100%);
+    }
 
-.clip3 {
-    //   background: linear-gradient(
-    //     to right top,
-    //     #834E66,
-    //     #3D3A61,
-    //     #a997d8,
-    //     #9aace7,
-    //     #90beef
-    //   );
-    opacity: 0;
-}
+    .clip3 {
+        //   background: linear-gradient(
+        //     to right top,
+        //     #834E66,
+        //     #3D3A61,
+        //     #a997d8,
+        //     #9aace7,
+        //     #90beef
+        //   );
+        opacity: 0;
+    }
 
-.clip4 {
-    //   background: linear-gradient(
-    //     to right top,
-    //     #c36ca1,
-    //     #b882c0,
-    //     #a997d8,
-    //     #9aace7,
-    //     #90beef
-    //   );
-    opacity: 0.21;
-}
+    .clip4 {
+        //   background: linear-gradient(
+        //     to right top,
+        //     #c36ca1,
+        //     #b882c0,
+        //     #a997d8,
+        //     #9aace7,
+        //     #90beef
+        //   );
+        opacity: 0.21;
+    }
 
-.special-font {
-    color: rgba(0, 0, 0, 0.87);
-    font-family: "Expletus Sans", cursive;
-}
+    .special-font {
+        color: rgba(0, 0, 0, 0.87);
+        font-family: "Expletus Sans", cursive;
+    }
 
 </style>

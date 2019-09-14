@@ -1,4 +1,4 @@
-# Ajla portfolio
+# Erland portfolio
 
 > Portfolio for Interaction designer Johan Erlandsson 
 
