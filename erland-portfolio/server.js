@@ -21,7 +21,7 @@ apiRouter.get('/postmaster/:name/:email/:message', (req, res, next) => {
 
     var data = {
         from: 'Excited Customer <postmaster@sandbox2f72beb589cd46e78ebff2f5ea6ad23b.mailgun.org>',
-        to: 'cano.ajla@gmail.com',
+        to: 'erlandd6@gmail.com',
         subject: 'from customer: ' + req.params.name + ' with email: ' + req.params.email,
         text: req.params.message
     }

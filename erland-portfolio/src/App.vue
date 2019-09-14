@@ -11,9 +11,10 @@
 </script>
 
 <style lang="scss">
-  @import url('https://fonts.googleapis.com/css?family=Lato');
+  @import url('https://fonts.googleapis.com/css?family=Raleway');
   .gradient-button {
-    background: linear-gradient(to right top, #c36ca1, #b882c0, #a997d8, #9aace7, #90beef);
+    // background: linear-gradient(to right top, #834E66, #3D3A61, #5A919B, #CBA67B, #74A79E);
+    border: 1px solid black;
     border-radius: 100px;
     display: inline-block;
     padding: 1px;
@@ -49,7 +50,7 @@
   }
 
   #app {
-    font-family: 'Lato', sans-serif;
+    font-family: 'Raleway', sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-align: center;
