@@ -12,15 +12,15 @@ app.use("/static", serveStatic(path.join(__dirname, '/static')));
 app.use(sslRedirect());
 
 apiRouter.get('/postmaster/:name/:email/:message', (req, res, next) => {
-    var apiKey = 'key-d3b5ee1965da4ee91df34f25693c9d31'
-    var domain = 'sandbox2f72beb589cd46e78ebff2f5ea6ad23b.mailgun.org'
+    var apiKey = '0f19e0a94a47c5f5f2f10e420143db25-c27bf672-707ab9a2'
+    var domain = 'sandboxf223c828143c4c40babce9350152428b.mailgun.org'
     var mailgun = require('mailgun-js')({
         apiKey: apiKey,
         domain: domain
     })
 
     var data = {
-        from: 'Excited Customer <postmaster@sandbox2f72beb589cd46e78ebff2f5ea6ad23b.mailgun.org>',
+        from: 'Excited Customer <postmaster@sandboxf223c828143c4c40babce9350152428b.mailgun.org>',
         to: 'erlandd6@gmail.com',
         subject: 'from customer: ' + req.params.name + ' with email: ' + req.params.email,
         text: req.params.message
