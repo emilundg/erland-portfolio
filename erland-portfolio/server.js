@@ -35,10 +35,6 @@ apiRouter.get('/postmaster/:name/:email/:message', (req, res, next) => {
     res.send('Gj m8');
 })
 
-app.get('/.well-known/acme-challenge/Af7qiju1qRnGtPMBsowJHGWLpSD2jhHay0bkpiJqG3Q', function (req, res) {
-    res.send('Af7qiju1qRnGtPMBsowJHGWLpSD2jhHay0bkpiJqG3Q.qmn5ogFW6AYmmbnfD9Mmd5HC58II9i9--DIgM2srvmw')
-})
-
 // create middleware to handle the serving the app
 app.use("/", serveStatic(path.join(__dirname, '/dist')))
 // Add API api-router.

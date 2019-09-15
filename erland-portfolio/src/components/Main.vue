@@ -376,7 +376,7 @@
                             <a href="https://www.linkedin.com/in/johan-erlandsson-542402150/"/>
                             <img
                                 class="social-icon-large"
-                                src="https://image.flaticon.com/icons/svg/220/220343.svg"/>
+                                src="/static/images/linkedin.png"/>
                         </div>
                         <h3>Or email me</h3>
                         <b-form class="m-4">
