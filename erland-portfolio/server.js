@@ -3,13 +3,13 @@ const serveStatic = require('serve-static')
 const path = require('path')
 // create the express app
 const app = express()
-var sslRedirect = require('heroku-ssl-redirect');
+// var sslRedirect = require('heroku-ssl-redirect');
 
 var apiRouter = express.Router()
 
 // Serve static assets
 app.use("/static", serveStatic(path.join(__dirname, '/static')));
-app.use(sslRedirect());
+// app.use(sslRedirect());
 
 apiRouter.get('/postmaster/:name/:email/:message', (req, res, next) => {
     var apiKey = '0f19e0a94a47c5f5f2f10e420143db25-c27bf672-707ab9a2'
