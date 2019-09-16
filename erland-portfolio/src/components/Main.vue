@@ -373,10 +373,11 @@
                     <b-media class="card-style">
                         <div class="contact-social-group m-4">
                             <h3>Linkedin</h3>
-                            <a href="https://www.linkedin.com/in/johan-erlandsson-542402150/"/>
+                            <a href="https://www.linkedin.com/in/johan-erlandsson-542402150/">
                             <img
                                 class="social-icon-large"
                                 src="/static/images/linkedin.png"/>
+                            </a>
                         </div>
                         <h3>Or email me</h3>
                         <b-form class="m-4">
